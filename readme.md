@@ -76,7 +76,7 @@ const mochaTests = generateMochaTests(feature);
 fs.writeFileSync('test.spec.js', mochaTests); // Save the generated test file
 ```
 
-** (Optiona) Log the Parsed Feature (Optional):**
+**Log the Parsed Feature (Optional):**
 
 - Use the `logFeature` function to inspect the parsed feature model:
 
