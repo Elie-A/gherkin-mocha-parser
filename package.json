@@ -1,0 +1,40 @@
+{
+  "name": "gherkin-mocha-parser",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist",
+    "format": "prettier --write ."
+  },
+  "author": "Elie Abdallah",
+  "license": "MIT",
+  "description": "Library to generate a mocha test based on a gherkin feature file",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elie-A/Gherkin-Parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Elie-A/Gherkin-Parser/issues"
+  },
+  "homepage": "https://github.com/Elie-A/Gherkin-Parser#readme",
+  "keywords": [
+    "mocha",
+    "gherkin",
+    "feature-file",
+    "bdd"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}
