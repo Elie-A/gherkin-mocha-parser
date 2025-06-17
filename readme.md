@@ -230,8 +230,23 @@ describe('Feature: User Login', function () {
 - Save the feature file as `example.feature`
 - Run the parser:
 
+**Running through the library:**
+
+- Install the library: `npm install gherkin-mocha-parser`
+
 ```ts
 import { parseFeature, generateMochaTests } from 'gherkin-mocha-parser';
+import fs from 'fs';
+
+const feature = parseFeature('example.feature');
+const tests = generateMochaTests(feature);
+fs.writeFileSync('test.spec.js', tests);
+```
+
+**Running through the project**
+
+```ts
+import { parseFeature, generateMochaTests } from './src/index'; // Change the path according to your tests' location
 import fs from 'fs';
 
 const feature = parseFeature('example.feature');
